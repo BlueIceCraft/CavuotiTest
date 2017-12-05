@@ -5,15 +5,15 @@ import java.util.Comparator;
 public class LastnameFirstnameRegistrationDatecomparator implements Comparator<Address> {
 
 	@Override
-	public int compare(Address arg0, Address arg1) {
-		int result = arg0.getLastname().compareTo(arg1.getLastname());
+	public int compare(Address address1, Address address2) {
+		int result = address1.getLastname().compareTo(address2.getLastname());
 		
 		if(result == 0) {
-			arg0.getFirstname().compareTo(arg1.getFirstname());
+			result = address1.getFirstname().compareTo(address2.getFirstname());
 		}
 		
 		if(result == 0) {
-			arg0.getRegistrationDate().compareTo(arg1.getRegistrationDate());
+			result = address1.getRegistrationDate().compareTo(address2.getRegistrationDate());
 		}
 		
 		return result;

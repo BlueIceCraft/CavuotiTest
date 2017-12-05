@@ -33,11 +33,11 @@ public class AddressDAO_Mockup implements AddressDAO {
 	}
 
 	public void update(Address address) {
-		// TODO: update, not implemented yet
+		addresses.set(address.getId(), address);
 	}
 	
 	public void delete(int id) {
-		// TODO: delete, not implemented yet
+		addresses.remove(id);
 	}
 
 }
